@@ -14,7 +14,7 @@ function uniqueNodes(arr) {
 }
 function sort(nodes, edges) {
     var cursor = nodes.length;
-    var sorted = new Array(cursor);
+    var sorted = new Array(cursor); // result array
     var visited = [];
     var i = cursor;
     while (i--) {
@@ -34,6 +34,7 @@ function sort(nodes, edges) {
             return;
         }
         visited[i] = true;
+        // outgoing edges
         var outgoing = edges.filter(function (edge) { return edge[0] === node; });
         if (i = outgoing.length) {
             var preds = predecessors.concat(node);
