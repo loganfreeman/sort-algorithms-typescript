@@ -10,6 +10,7 @@
         "./typings/browser.d.ts"
     ],
     "atom": {
-        "rewriteTsconfig": false
+        "rewriteTsconfig": false,
+        "formatOnSave": true
     }
 }
