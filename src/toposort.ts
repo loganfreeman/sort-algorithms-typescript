@@ -49,6 +49,6 @@ function sort(nodes: any[], edges: any[]) {
     }
 }
 
-export function toposort(edges: any[]) {
-  return sort(uniqueNodes(edges), edges)
+export default function toposort(edges: any[]) {
+      return sort(uniqueNodes(edges), edges)
 }

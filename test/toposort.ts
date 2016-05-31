@@ -1,4 +1,4 @@
-import {toposort} from '../src/toposort';
+import toposort from '../src/toposort';
 import {expect} from 'chai';
 
 describe('toposort', () => {

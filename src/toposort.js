@@ -14,7 +14,7 @@ function uniqueNodes(arr) {
 }
 function sort(nodes, edges) {
     var cursor = nodes.length;
-    var sorted = new Array(cursor); // result array
+    var sorted = new Array(cursor);
     var visited = [];
     var i = cursor;
     while (i--) {
@@ -34,7 +34,6 @@ function sort(nodes, edges) {
             return;
         }
         visited[i] = true;
-        // outgoing edges
         var outgoing = edges.filter(function (edge) { return edge[0] === node; });
         if (i = outgoing.length) {
             var preds = predecessors.concat(node);
@@ -49,4 +48,5 @@ function sort(nodes, edges) {
 function toposort(edges) {
     return sort(uniqueNodes(edges), edges);
 }
-exports.toposort = toposort;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = toposort;
