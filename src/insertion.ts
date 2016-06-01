@@ -1,4 +1,4 @@
-import swap from './swap';
+import swap from './swap'
 
 /**
  * Insertion sort
@@ -7,19 +7,19 @@ import swap from './swap';
  * @return {Array}
  */
 function insertionSort(array: Array<number>): Array<number> {
-    array = array.slice();
+    array = array.slice()
 
     for (let i: number = 0; i < array.length - 1; i++) {
         for (let j: number = i + 1; j > 0; j--) {
             if (array[j] >= array[j - 1]) {
-                break;
+                break
             }
 
-            swap(array, j, j - 1);
+            swap(array, j, j - 1)
         }
     }
 
-    return array;
+    return array
 }
 
-export default insertionSort;
+export default insertionSort

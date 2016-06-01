@@ -1,11 +1,5 @@
 "use strict";
 var swap_1 = require('./swap');
-/**
- * Bubble sort
- * @see https://en.wikipedia.org/wiki/Bubble_sort
- * @param {Array} array
- * @return {Array}
- */
 function bubbleSort(array) {
     array = array.slice();
     var i = array.length - 1;
@@ -17,11 +11,11 @@ function bubbleSort(array) {
             continue;
         }
         if (array[j] > array[j + 1]) {
-            swap_1["default"](array, j, j + 1);
+            swap_1.default(array, j, j + 1);
         }
         j++;
     }
     return array;
 }
-exports.__esModule = true;
-exports["default"] = bubbleSort;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = bubbleSort;

@@ -7,27 +7,27 @@ import swap from './swap';
  * @return {Array}
  */
 function cocktailSort(array: Array<number>): Array<number> {
-    array = array.slice();
+    array = array.slice()
 
-    let gap: number = array.length;
-    let swapped: boolean = false;
+    let gap: number = array.length
+    let swapped: boolean = false
 
     while (swapped || gap > 1) {
         if (gap > 1) {
-            gap = Math.floor(gap / 1.247);
+            gap = Math.floor(gap / 1.247)
         }
 
-        swapped = false;
+        swapped = false
 
         for (let i: number = 0; i + gap < array.length; i++) {
             if (array[i] > array[i + gap]) {
-                swap(array, i, i + gap);
-                swapped = true;
+                swap(array, i, i + gap)
+                swapped = true
             }
         }
     }
 
-    return array;
+    return array
 }
 
-export default cocktailSort;
+export default cocktailSort

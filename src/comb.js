@@ -1,11 +1,5 @@
 "use strict";
 var swap_1 = require('./swap');
-/**
- * Comb sort
- * @see https://en.wikipedia.org/wiki/Comb_sort
- * @param {Array} array
- * @return {Array}
- */
 function cocktailSort(array) {
     array = array.slice();
     var gap = array.length;
@@ -17,12 +11,12 @@ function cocktailSort(array) {
         swapped = false;
         for (var i = 0; i + gap < array.length; i++) {
             if (array[i] > array[i + gap]) {
-                swap_1["default"](array, i, i + gap);
+                swap_1.default(array, i, i + gap);
                 swapped = true;
             }
         }
     }
     return array;
 }
-exports.__esModule = true;
-exports["default"] = cocktailSort;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = cocktailSort;

@@ -9,13 +9,13 @@ function swap(array: Array<number>, int1: number, int2: number): void {
         throw new Error(`
             int1 is ${int1} - ${array[int1]}
             int2 is ${int2} - ${array[int2]}
-        `);
+        `)
     }
 
-    let oldInt1: number = array[int1];
+    let oldInt1: number = array[int1]
 
-    array[int1] = array[int2];
-    array[int2] = oldInt1;
+    array[int1] = array[int2]
+    array[int2] = oldInt1
 }
 
-export default swap;
+export default swap

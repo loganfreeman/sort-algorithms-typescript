@@ -1,4 +1,4 @@
-import swap from './swap';
+import swap from './swap'
 
 /**
  * Bubble sort
@@ -7,26 +7,26 @@ import swap from './swap';
  * @return {Array}
  */
 function bubbleSort(array: Array<number>): Array<number> {
-    array = array.slice();
+    array = array.slice()
 
-    let i: number = array.length - 1;
-    let j: number = 0;
+    let i: number = array.length - 1
+    let j: number = 0
 
     while (i > 0) {
         if (j === i) {
-            j = 0;
-            i--;
-            continue;
+            j = 0
+            i--
+            continue
         }
 
         if (array[j] > array[j + 1]) {
-            swap(array, j, j + 1);
+            swap(array, j, j + 1)
         }
 
-        j++;
+        j++
     }
 
-    return array;
+    return array
 }
 
-export default bubbleSort;
+export default bubbleSort
