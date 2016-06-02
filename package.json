@@ -17,6 +17,7 @@
     "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server",
     "test": "node node_modules/karma/bin/karma start karma.conf.js",
     "lint": "tslint 'src/**/*.ts'",
+    "test-lint": "tslint 'test/**/*.ts'",
     "build": "rimraf lib/ && tsc"
   },
   "devDependencies": {
