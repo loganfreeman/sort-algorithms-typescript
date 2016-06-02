@@ -59,4 +59,4 @@ run
 npm i -g ts-node
 ts-node test.ts
 ```
-ts-node
+
