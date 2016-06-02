@@ -3,24 +3,29 @@
   "description": "Basis sort array algorithms in TypeScript",
   "version": "0.0.1",
   "license": "MIT",
-  "author": "Mikhail Bodrov <connormiha1@gmail.com>",
+  "author": "Logan Cheng <loganfreeman@live.com>",
   "engines": {
     "node": ">=5.2.0",
     "npm": ">=3.3.0"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Connormiha/sort-algorithms-typescript.git"
+    "url": "git@github.com:loganfreeman/sort-algorithms-typescript.git"
   },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
-    "postinstall": "node node_modules/typings/dist/bin.js install",
+    "typings": "node node_modules/typings/dist/bin.js install",
     "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server",
     "test": "node node_modules/karma/bin/karma start karma.conf.js",
     "lint": "tslint 'src/**/*.ts'",
     "test-lint": "tslint 'test/**/*.ts'",
+    "lint-all": "npm run lint && npm run test-lint",
+    "prepublish": "npm run lint-all && npm run test",
     "build": "rimraf lib/ && tsc"
   },
   "devDependencies": {
+    "benchmark": "^2.1.0",
     "chai": "^3.5.0",
     "karma": "0.13.22",
     "karma-mocha": "^0.2.2",
@@ -28,6 +33,7 @@
     "karma-nyan-reporter": "^0.2.4",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-webpack": "1.7.0",
+    "microtime": "^2.1.1",
     "mocha": "2.4.5",
     "phantomjs-prebuilt": "^2.1.7",
     "ts-loader": "0.8.1",
