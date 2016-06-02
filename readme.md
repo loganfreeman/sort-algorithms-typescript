@@ -37,3 +37,26 @@ console.log(arr);
 
 console.log(algorithms.insertionsort(arr.slice()));
 ```
+
+Typescript
+---
+test.ts
+```typescript
+import {toposort} from 'sort-algorithms-typescript'
+
+let graph = [
+    ['put on your shoes', 'tie your shoes']
+    , ['put on your shirt', 'put on your jacket']
+    , ['put on your shorts', 'put on your jacket']
+    , ['put on your shorts', 'put on your shoes']
+]
+
+let sorted = toposort(graph)
+console.log(sorted)
+```
+run
+```shell
+npm i -g ts-node
+ts-node test.ts
+```
+ts-node
