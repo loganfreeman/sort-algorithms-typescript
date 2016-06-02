@@ -15,7 +15,9 @@
   "scripts": {
     "postinstall": "node node_modules/typings/dist/bin.js install",
     "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server",
-    "test": "node node_modules/karma/bin/karma start karma.conf.js"
+    "test": "node node_modules/karma/bin/karma start karma.conf.js",
+    "lint": "tslint 'src/**/*.ts'",
+    "build": "rimraf lib/ && tsc"
   },
   "devDependencies": {
     "chai": "^3.5.0",
